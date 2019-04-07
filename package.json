@@ -1,0 +1,15 @@
+{
+  "name": "troca-banio",
+  "version": "1.0.0",
+  "description": "troca-banio",
+  "repository": "https://git.heroku.com/troca-banio.git",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Manuel Agustín Aquino",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
