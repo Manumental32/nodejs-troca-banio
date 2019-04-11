@@ -7,18 +7,25 @@ app.listen(port, () => {
  console.log("Server running on port " + port);
 });
 
-app.get("/url", (req, res, next) => {
- res.json(["Tony","Lisa","Michael","Ginger","Food"]);
-});
-
 var occupied = true;
+var lrdLimit = 500;
 
 app.get("/", (req, res, next) => {
  res.json(occupied);
 });
 
+app.post("/ldr/:lrd", (req, res, next) => {
+  //res.send("tagId is set to " + req.params.lrd);
+ occupied = req.params.lrd < ldrLimit;
+ res.json(occupied);
+});
 
-app.post("/", (req, res, next) => {
+app.post("/ldrlimit/:lrdLimit", (req, res, next) => {
+	lrdLimit = req.params.lrdLimit;
+ res.json(lrdLimit);
+});
+
+app.post("/occupied/:occupied", (req, res, next) => {
 	occupied = !occupied;
  res.json(occupied);
 });
