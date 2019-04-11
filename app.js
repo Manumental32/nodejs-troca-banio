@@ -8,7 +8,7 @@ app.listen(port, () => {
 });
 
 var occupied = true;
-var lrdLimit = 500;
+var ldrLimit = 500;
 
 app.get("/", (req, res, next) => {
  res.json(occupied);
