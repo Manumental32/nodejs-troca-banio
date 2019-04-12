@@ -7,7 +7,7 @@ app.listen(port, () => {
  console.log("Server running on port " + port);
 });
 
-var ldrLimit = -1;
+var ldr = -1;
 var occupied = true;
 var ldrLimit = 500;
 
