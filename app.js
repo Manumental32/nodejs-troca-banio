@@ -18,7 +18,7 @@ app.get("/", (req, res, next) => {
 
 app.post("/ldr/:ldr", (req, res, next) => {
   //res.send("tagId is set to " + req.params.lrd);
-  ldr = req.param.ldr;
+  ldr = req.params.ldr;
   occupied = req.params.ldr < ldrLimit;
   res.json(occupied);
 });
