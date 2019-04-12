@@ -13,17 +13,17 @@ var ldrLimit = 500;
 
 app.get("/", (req, res, next) => {
 	console.log('ldrLimit',ldrLimit);
- res.json(occupied);
+    res.json(occupied);
 });
 
 app.post("/ldr/:lrd", (req, res, next) => {
   //res.send("tagId is set to " + req.params.lrd);
- occupied = req.params.lrd < ldrLimit;
- res.json(occupied);
+  ldr = req.param.ldr;
+  occupied = req.params.lrd < ldrLimit;
+  res.json(occupied);
 });
 
 app.get("/ldr/", (req, res, next) => {
-	ldr = req.param.ldr;
 	res.json(ldr);
 });
 
