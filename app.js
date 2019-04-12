@@ -22,9 +22,9 @@ app.post("/ldr/:lrd", (req, res, next) => {
  res.json(occupied);
 });
 
-app.get("/lrd/", (req, res, next) => {
-	lrd = req.param.ldr;
-	res.json(lrd);
+app.get("/ldr/", (req, res, next) => {
+	ldr = req.param.ldr;
+	res.json(ldr);
 });
 
 app.post("/ldrlimit/:lrdLimit", (req, res, next) => {
