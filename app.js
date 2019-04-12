@@ -7,10 +7,12 @@ app.listen(port, () => {
  console.log("Server running on port " + port);
 });
 
+var lrd = -1;
 var occupied = true;
 var ldrLimit = 500;
 
 app.get("/", (req, res, next) => {
+	console.log('ldrLimit',ldrLimit);
  res.json(occupied);
 });
 
@@ -20,12 +22,12 @@ app.post("/ldr/:lrd", (req, res, next) => {
  res.json(occupied);
 });
 
-app.post("/ldrlimit/:lrdLimit", (req, res, next) => {
-	lrdLimit = req.params.lrdLimit;
- res.json(lrdLimit);
+app.get("/lrd/", (req, res, next) => {
+	lrd = req.param.ldr;
+	res.json(lrd);
 });
 
-app.post("/occupied/:occupied", (req, res, next) => {
-	occupied = !occupied;
- res.json(occupied);
+app.post("/ldrlimit/:lrdLimit", (req, res, next) => {
+	lrdLimit = req.params.lrdLimit;
+    res.json(lrdLimit);
 });
